@@ -126,7 +126,7 @@
     <ClCompile Include="static.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="arrayutils_static.h" />
+    <ClInclude Include="arraylib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

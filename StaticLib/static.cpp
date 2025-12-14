@@ -1,7 +1,7 @@
-#include "arrayutils_static.h"
+#include "arraylib.h"
 
 namespace ArrayUtils {
-    void sort(int* arr, int size) {
+    void sortArray(int* arr, int size) {
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
@@ -13,7 +13,7 @@ namespace ArrayUtils {
         }
     }
 
-    int find(const int* arr, int size, int value) {
+    int findElement(const int* arr, int size, int value) {
         for (int i = 0; i < size; i++) {
             if (arr[i] == value) {
                 return i;
@@ -22,7 +22,7 @@ namespace ArrayUtils {
         return -1;
     }
 
-    double average(const int* arr, int size) {
+    double averageArray(const int* arr, int size) {
         if (size == 0) return 0.0;
         double sum = 0;
         for (int i = 0; i < size; i++) {

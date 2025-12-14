@@ -106,7 +106,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>"D:\VS source\Libs\x64\Debug\DynamicLIb.lib";"D:\VS source\Libs\x64\Debug\StaticLib.lib";%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>"D:\VS source\Libs\x64\Debug\DynamicLIb.lib";"D:\VS source\Libs\x64\Debug\StaticLib.lib";"D:\VS source\Libs\x64\Debug\Namespace.lib";%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

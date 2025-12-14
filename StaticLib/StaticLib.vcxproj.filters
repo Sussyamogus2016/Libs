@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="arrayutils_static.h">
+    <ClInclude Include="arraylib.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
