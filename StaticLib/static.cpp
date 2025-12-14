@@ -1,15 +1,20 @@
-#include "arraylib.h"
-#include <iostream>
-#include <algorithm>
-#include <numeric>
+#include "arrayutils_static.h"
 
 namespace ArrayUtils {
     void sort(int* arr, int size) {
-        std::sort(arr, arr + size);
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = 0; j < size - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
     }
 
     int find(const int* arr, int size, int value) {
-        for (int i = 0; i < size; ++i) {
+        for (int i = 0; i < size; i++) {
             if (arr[i] == value) {
                 return i;
             }
@@ -19,16 +24,10 @@ namespace ArrayUtils {
 
     double average(const int* arr, int size) {
         if (size == 0) return 0.0;
-        double sum = std::accumulate(arr, arr + size, 0.0);
-        return sum / size;
-    }
-
-    void printArray(const int* arr, int size) {
-        std::cout << "[";
-        for (int i = 0; i < size; ++i) {
-            std::cout << arr[i];
-            if (i < size - 1) std::cout << ", ";
+        double sum = 0;
+        for (int i = 0; i < size; i++) {
+            sum += arr[i];
         }
-        std::cout << "]" << std::endl;
+        return sum / size;
     }
 }
